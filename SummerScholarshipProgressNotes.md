@@ -40,4 +40,12 @@
     	* typescript (project will be written in typescript because it makes organizing logic easier)
     	* visual studio code because the integrated debug and terminal windows make the workflow nice and easy
     	* typings because it makes organizing the types easier
-  	* List for AAA in a separate File
+   	* List for AAA in a separate File
+	* After the meeting with arts access aotearoa and the flightdec head we found out that they do not currently have an api but rather that they will have to build one in order for the alexa skill to make GET requests and search the relevant index. Because of this I need to write a concise email explaining what the alexa skill will do and how I would ideally like the get request to work. I need to write all of this out in an email by tomorrow morning. The basic paramaters that i need to search by are:
+		* Location
+		* Venue
+		* Time/Date
+		* Accessibility
+		* paid/free
+		* Category (type of event)
+	* these search terms are based on the information/keywords used by the AAA events search webpage. Tomorrows workflow includes writing an email to the flightdec guys. Getting an OTP from gillian and trying to change the phone number for the uni alexa account once and for all. Building a skill that searches apis like the eventfinda one throug ask-cli, typescript etc (follow along tutorials)
