@@ -59,3 +59,5 @@
    *  map out decision tree for skill based on previous one
    *  get a proper working javascript prototype using the basic eventfinda api. 
    *  Work out a better developmment and testing timeline
+* ##### 24 Nov
+    * I came in to uni for a few hours on sunday to make up time and do some more work on the projec. I basically did some more work building node packages and different methods of building the Alexa skill. I made some progress but still got a bunch of errors. 
