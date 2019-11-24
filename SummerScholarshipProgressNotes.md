@@ -61,3 +61,14 @@
    *  Work out a better developmment and testing timeline
 * ##### 24 Nov
     * I came in to uni for a few hours on sunday to make up time and do some more work on the projec. I basically did some more work building node packages and different methods of building the Alexa skill. I made some progress but still got a bunch of errors. 
+
+### 25/11/19 - 29/11/19
+#### Week Two Questions/Concerns:
+* What to do about the lack of Arts Access Aotearoa API
+* Build a separate skill or develop Ed's Further
+* Build with jovo to add google assistant to the scope?
+* Potentially expand other event databases if Arts Access isn't an option
+* Meet with Gillian
+  
+* ##### 25 Nov
+  * Today the goal is to organize a progress meeting with Gillian and develop a basic alexa skill using Jovo and the Eventfinda API to test its viability. Also look into other event database API's in case the Arts Access Aotearoa one does not eventuate.
