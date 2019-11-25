@@ -71,4 +71,7 @@
 * Meet with Gillian
   
 * ##### 25 Nov
-  * Today the goal is to organize a progress meeting with Gillian and develop a basic alexa skill using Jovo and the Eventfinda API to test its viability. Also look into other event database API's in case the Arts Access Aotearoa one does not eventuate.
+  * Today the goal is to organize a progress meeting with Gillian and develop a basic alexa skill using Jovo and the Eventfinda API to test its viability. Also look into other event database API's in case the Arts Access Aotearoa one does not eventuate. Jovo looks like a potential option but it depends if expansion beyond the alexa speakers/apps is within the scope of this project. It would also require a fair amount of rewrites to ed's code. I also spent the day trying to debug thelocal package from github in order to deploy it to my aws for testing purposes but it seems that since it was last edited some of the dependencies are broken/not working. Of the initial 19 errors, I have one left that seems to persist and it appears to be to do with the moment-timezone package.
+
+* ##### 26 Nov
+  * Today I will debug and hopefully deploy the local to my aws so i can really test it, add other functionalities to it.
