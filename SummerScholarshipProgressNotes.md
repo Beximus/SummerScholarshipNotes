@@ -76,3 +76,10 @@
 * ##### 26 Nov
   * Today I will debug and hopefully deploy the local to my aws so i can really test it, add other functionalities to it.
   * New EXCITING update! The AAA API now exists and i have a key for it:  ($6$rounds=5000$GMB8PxknLlCqpCjk$Bb5TarwHO4J7wUjZMbuFlTQn8yAqnrFtBN41jgK4Jkf8fGbGQgxAr7lQn.boKQOPLIr0RB2W3aYPoiD9CgF85/), Im putting it in here just in case i manage to lose it somehow) I have already run some test API searches and it works like a dream so now its just a matter of doing the hard work of building a skill.
+
+* ##### 27 Nov
+  * So I spent a lot of yesterday trying to fix what I thought was my broken code - turns out the API returns broken json. I talked to steven about it to see if he knew of any JSON linters or such that would be able to parse it properly but unfortunately the format is broken enough that the only solution is for logan to fix the api output from his end or loose a few more days to write regex functions and build a parser. My current plan is to take a few results JSON and format them correctly, then spend the rest of the day building a dummy skill using jovo or alexa that accesses those results to demonstrate to gillian. 
+  * Clean up some JSONS
+  * Create a skill with diffent intents to sort through events
+  * Write up process so far
+  * Have meeting and plan trajectory
