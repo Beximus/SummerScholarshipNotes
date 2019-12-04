@@ -107,3 +107,8 @@
   * ![pepe silvia wall image](images/dayOneStart.jpg "wall at the start of the day")
   * Here is the wall at the end of the day
   * ![pepe silvia wall image](images/dayOneEnd.jpg "wall at the end of the day")
+
+* ##### 4 Dec
+  * Today worked more on starting up the skill proper. Logan fixed the API (no Json parser necessary now) and added all of the information that he has accesible through the search function to the api. This means that I re worked my plans again but this time they are significantly more concrete. I now have the queries that i can send to the api as well as the terms I can refine by after the intial search (as well as a list of information that can only be retrieved from the individualized event pages). I updated the wall in response to these changes.
+  * ![pepe silvia wall image](images/dayTwo.jpg "wall day two")
+  * I then spent the rest of the day working on getting the basic first part search done for the skill. I didn't finish but it shouldnt take too long tomorrow. Once i have that sorted i can work on passing information from custom slot responses to the get requests. (today i worked from 11:30 till 7:30)
