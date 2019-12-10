@@ -118,3 +118,14 @@
 
 * ##### 6 Dec
 * Today i ust did more work on the model builder , get reques builder and session attribute handler.
+
+### 9/12/19 - 13/12/19
+#### Week Three Questions/Concerns:
+* How will i get the session attrributes to store and work properly
+  
+
+* ##### 9 Dec
+  * Today was more work on the model builder, request builder etc. I wrote a package that writes two lists; on that gets all of the locations of every event listed and the other one that gets the categories of  all of the events listed. this package also contains other modules that wll be usefull for development
+
+* ##### 10 Dec
+  * My write ups for the last few days have been pretty sparse, mostly because im still working on the same modules as before. Today I finished the language model builder which is nice because it makes updating and working on the skill a lot easier for now and also in future. I also made some progress on storing the current session attributes however i will have to do more experimentation as to wether or not i can store the entire search request bodyin attributes or if i have to parse it somehow. im thinking dynamo db is my best option. 
