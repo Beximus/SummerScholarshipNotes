@@ -129,3 +129,6 @@
 
 * ##### 10 Dec
   * My write ups for the last few days have been pretty sparse, mostly because im still working on the same modules as before. Today I finished the language model builder which is nice because it makes updating and working on the skill a lot easier for now and also in future. I also made some progress on storing the current session attributes however i will have to do more experimentation as to wether or not i can store the entire search request bodyin attributes or if i have to parse it somehow. im thinking dynamo db is my best option. 
+
+* ##### 11 Dec
+  * So I know my documentation for the last few days has been brief but it is becuase I have been really in the weeds getting the core scripts for this project to work. Basically I have a model builder script now that i can expand by just building out the dictionary (list of combinations of words and phrases) that generates the utterances. I have built a get request cnnstructor and a way of saving the returned search bodies.
