@@ -138,3 +138,50 @@
   
 * ##### 13 Dec
   * Alright so today I worked more on the search constructor intent, making sure that every time you call "search events" it wipes the assigned session attributes and re inserts the new one to avoid a bug I was encountering when you searched, refined then listed events and if you tried to execute a different search it could only search from the existing list. The next thing i worked on was making sure all of the possible categories for refinement were available as a part of the search functionality. I also created the read events intent then shortly thereafter changed it so that it would become the list event details intent instead so that it can list the current refined search list names, details, categories, locations or combinations thereof. I also need to add a list possible locations and categories to search by intent. The most pressing one is to create an intent that selects a specific event and then scrapes all of the body text data from the specific event inside of the given timeframe. I also need to create a library script to translate the given dates and times for events into versions that amazon.date.time.month can parse correctly. I also need to create a tutorial skill that can guide the user through the search, refine, list select process. I will do a proper write up on the last two weeks process on monday morning for real. I also need to go bakc and fix a bunch of the scripts because it currently cant get past the pagination for the api results and the memory size and timeout of the lambda function because i already upped them but i dont think it was enough. I need to add dynamo db to this so that i can make the search process run a lot smoother.
+  
+## Post Break Notes Catch up.
+
+### Week Four: 16/12/19 - 19/12/19
+
+* So in the last four days before break, I got very in the weeds about fixing technical issues and getting the skill running properly and as a result i completely blanked on writing up reports about my progress and decision making over the course of those days so I will now do my best to summarise them. The major hurdle that I kept running into with the skill was the pagination of results from the server and the resulting timeouts from alexa when trying to navigate these issues. In short Alexa has an 8-10 second timeout for all skills requests. This means that if the called intent cannot complete its processes within that time frame she returns an error message by default. After initial research I found that aside from some very sketchy (buggy/unstable) workarounds involving having alexa play an mp3 of  3-4 seconds of silence (which would result in the user not having access to the microphone for that period) There isn't any way around the timeout issue. This meant that I had to shift my focus to "cutting the fat" or ensuring that my api requests and subsequent functions run as quickly as possible. 
+    * The first thing I did was start checking how long different types of API calls took and basically what i found was that search functions take significantly longer than basic empty calls (returning the entire list of events) which makes sense, and the subsequent pages of any result always take longer than the first page. Basically the results were: simple call to the api 1 -2 seconds , simple call to the second page of the api 3-4 seconds, simple call for an event search 2 -4 seconds, simple call for second page of an event search 3-4 seconds. These times also appeared erratic.
+    * The varying response times for the api meant that the first thing i started to look at were ways to speed up/ensure that my api calls were executing as fast as possible, the second was to make sure that different intents were using the correct type of event call for their function - so a blank or fallback search for all events actually executes a simple api call rather than a search for "" because it executes quicker. It also highlighed the necessity for a get next page intent as there was no way to make the search retrieve and store all pages of results in one go. 
+    * The creation of a get next intent also necessitated a second get request script as it would execute the searches including page numbers.
+    * It also highlighted the need for a clear all intent to clear the list of searched events should the user wish to start again for whatever reason. 
+    * it also highlighted the need for an addition to the original get function to differentiate between a simple call and a specific search. This change also had to be made to the get next function.
+  
+  #### List of intents/things implemented before the break:
+  * Initiate Search intent
+  * Refine By intent
+  * Read list intent
+  * get next intent
+  * clear all intent
+  * get request script
+  * get next script
+  * list generator for the model builder
+  * model builder
+  * session attribute getter/editor
+  * Proper help message
+
+### Week five: 6/1/20 -10/1/20
+
+* So in coming back from break I have quite a few things to get ready for user testing next week. My main focus right now is to get all of the technical aspects of the skill running while avoiding timeout errors as much as possible. 
+##### The list of things to do this week are as follows:
+ * Ensure the Get Next page functions properly without timeouts
+ * Run the rest of the skill a few times to find tests and shanghai friends into doing some pre user testing debug/bugfinding , (this is mostly to ensure that the AU language model is the best option) and to find potential syntactical errors
+ * Make the Help function run as smoothly as possible
+ * Create and run a scraper function correctly
+ * add event bookmarking using dynamo DB
+ * MAKE A TUTORIAL Function(all caps for importance)
+ * Clarify the UX journey / decision making process
+ * MOVE SKILL TO VUW ALEXA DEVELOPER ACCOUNT, AWS LAMBDA AND DB AS WELL AS TESTING ON THE ACUTAL ALEXA (which i have been avoiding because loading and testing the skill onto the real alexa takes ages and feels like screeching into the abyss while debugging)
+
+##### January 6
+* Today I spent the day refamiliarisng myself with the project (coming back from the break gave me a sort of fresh eyes perspective to the technical issues) I spent some of the break thinking about the technical issuse  and protential UI/UX solutions to the technical limitations and i think the best option is to essentially talk the user through it. So most of today was just going through my game plan, establishing what the welcome message should actually say to the user, and solidifying my idea that alexas responses should be as concise as possible while still elaborating user options. I want to make sure that when the user says "help me" etc that they are prompted with a reminder of all the different intents available to them such as clear all, search and get next, refine by, read list. When time allows i would also like the help function to suggest to users what to do based on the intent they had accesed prior to asking for help but it is pretty low on the priority list right now. I shortened my Get requests to as few lines as possible because while using class constructors felt nice and smort, the plain requests executed faster and at the moment quick execution of functions is the highest priorty. I also spent time over the break thinking about the best way to construct a tutorial function for the user, and i think the best way is to construct a guided search for the user that refines by another searchable term and then reads the name, location and category of the first requested event. I also would like to add an intent that lists things you can search by (Free, Touch Tour, Audio Described, list of Locations, list of categories), as well as a list of things that the search can be refined by (list of locations, list of categories, wheelchair access, accessible toilets, mobility parking) and the list of things that can unfortunately only be accessed by listening to the full event description. I think that the best way to go about delivering this skill is to be upfront with the users about the limitations ("at this time these particular data points can only be found in full event descriptions when provided").
+
+##### January 7 
+* Todays first task was to make sure I write up as much of the process as I can remember from the days i missed as well as get down some of the thoughts i had over the break that coalesced properly yesterday. The next task is to ensure both get functions run smoothly and begin adding a scraper function to look at specific events.
+* I am now including a photo of the sticky wall - this is the form it was in when I left for break and by the end of today it should hopefully look very different. 
+* ![breakwall image](images/breakWall.jpg "The Pepe Silvia Wall in all of its glory before break")
+
+
