@@ -184,4 +184,10 @@
 * I am now including a photo of the sticky wall - this is the form it was in when I left for break and by the end of today it should hopefully look very different. 
 * ![breakwall image](images/breakWall.jpg "The Pepe Silvia Wall in all of its glory before break")
 
+##### January 8
+* Although i have not/cannot resolve the current timeout/datasize issue that i have been facing with the skill i decided to pivot  my focus in order to come back fresh. I spent today looking at Dynamo DB in order to implement bookmarking and storage of events for users as well as to use a separate dynamo db table as a workaround/fall back should users want to search the entire database. structuring the database builder correctly took a while but i have included a database builder script in the model builder function.
+
+##### January 9 
+* today i did more work implementing the dynamodb systems and testing write to databases from within the skill itself. One of the biggest issues i have is that the alexa skill can not store more tha 24 events worth of data in the session attributes area at any one time (nor should she). What this means though is that once the database expands beyond only having 30 ish events listed the skill will no longer work properly even if the users search for specific terms. This means that for now although im focusing on getting the entire skill to work from session attributes, I would like to ensure i can move the majority of the skill to DynamoDB so it is less influenced by data size. Because 24 KB is a small amount of data to be working with. And although dynamoDB write limit is approximately 25 MB the pagination means that the biggest size a results page can be is about 15 KB and the max size of a Dynamo Table is SIGNIFICANTLY larger than that. This afternoon I will focus on re writing the skill to prompt the user to search by a specific term and leave it open to fix with dynamo later. I will integrate the data scraper by the end of today and hopefully will have the user able to bookmark specific events by the end of tomorrow.
+
 
