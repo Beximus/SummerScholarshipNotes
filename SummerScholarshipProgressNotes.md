@@ -234,3 +234,5 @@
 * ![deskwall3 image](images/wall3Jan14.jpg "AWS stuff, meeting dates and user testing notes to remember - technically the computer not the wall but whatever")
 * This is the current state of the post it wall - I find these work better than traditional notes for me because they are laid out in terms of their relevance to each technical section and their relationships to one another. For the main section, the green notes are titles, the  peach ones are limitations or mitigating factors, blue are technical notes and orange is more of a to do list kind of thing.
 
+##### January 15
+* Today I have organized one of my friends (Zala Habib) to come in and try to find some bugs in the interaction /code for me in her lunch break. Other than that i am implementing my tutorial functions and refining them and then continuing to figure out the dynamoDB situation so that wehn i send my email to (skill expert guy with the name i cant remember right now) i dont waste his time by asking stupid questions.
