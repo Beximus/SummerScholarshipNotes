@@ -190,4 +190,44 @@
 ##### January 9 
 * today i did more work implementing the dynamodb systems and testing write to databases from within the skill itself. One of the biggest issues i have is that the alexa skill can not store more tha 24 events worth of data in the session attributes area at any one time (nor should she). What this means though is that once the database expands beyond only having 30 ish events listed the skill will no longer work properly even if the users search for specific terms. This means that for now although im focusing on getting the entire skill to work from session attributes, I would like to ensure i can move the majority of the skill to DynamoDB so it is less influenced by data size. Because 24 KB is a small amount of data to be working with. And although dynamoDB write limit is approximately 25 MB the pagination means that the biggest size a results page can be is about 15 KB and the max size of a Dynamo Table is SIGNIFICANTLY larger than that. This afternoon I will focus on re writing the skill to prompt the user to search by a specific term and leave it open to fix with dynamo later. I will integrate the data scraper by the end of today and hopefully will have the user able to bookmark specific events by the end of tomorrow.
 
+##### January 10
+* These notes were written in hindsight: I spent most of the day working on getting my slight re write of the skill to work correctly, I made the skill basically inform the user that there were specific limitations to how many events can be held in device memory at any one time meaning that although the database contains more than 24 events, the maximum number of events that can currently be refined through is 24 ( which when a search term is used seems to be more than enough space but when searching all events is somewhat more problematic). I also found a flaw in the model that means when a user says search by "hutt" the search function automatically searches for hutt city instead of simply hutt. This is a problem that doesnt exist when refining events though.
+
+### Week 6: 13/1/20 - 17/1/20
+* I did come in on the weekend to finish making the skill work properly and remove all the Dynamo dB parts that were making it buggy so that the user testing will not be a complete waste
+#### Things to implement/sort out in the next week:
+
+1. Tutorial Function/s
+   1. Contextualise the skill
+   2. Explain terms
+   3. Begin guiding user through a search
+   4. The tutorial can piggy back off the regular intents to introduce each function/expected prompt
+   5. Starts by accessing session attributes value called tutorial and setting it to TRUE
+   6. Also create a separate intent called end tutorial that can reset the session attribute to FALSE
+   7. The tutorial will have very verbose prompts for user action.
+2. Re Write Prompts for intents 
+   1. Welcome message: Clarify skill name and invocation, convey the short form use case for the skill, prompt user to the next possible actions (Tutorial, Help, Search)
+   2. Help Message: Tell user which skill they are in, give a brief prompt to either start searching, refine their results or take the tutorial.
+   3. Initial Search: The end of the response should prompt the next expected response/ possible responses.
+   4. Get next: End of response should prompt the user to refine or listen to the list of their responses.
+   5. Refine: End should prompt user to either continue refining or list results matching their terms
+   6. List: End should prompt user to list specific events or to get full event descriptions.
+3. List function should be edited to be able to return the specific categories and locations of events when selected with ordinals.
+4. DYNAMODB
+   1. Store search results to DB instead of storing them to the session attributes;
+   2. Refine results through the DB instead of session attributes
+   3. Let Users bookmark session events so they can come back later
+   4. auto delet entries for events that have passed/ are no longer in the database
+   5. manually delete bookmarked entries
+5. How many stored events:
+   1. create an intent that lists how many results currently match the users search terms
+6. Searchable terms
+   1. create an intent that lists possible search terms: incl. currently available locations and search terms
+
+##### January 13
+* I moved the "clean" skill hosting to the vuwmuxd alexa developer account and began the steps for vuw having its own AWS account so that all of the skill assets etc canbe managed by anyone with access to it rather than having the lambda (back end) hosted by each individual developer. Because I had the skill finally hosted to the vuw amazon developer account i also made sure that the skill name and invocation were compliant with alexa requirements. I also tested the skill a bit and cleaned up some of the dialogues etc.
+
+##### January 14 
+* Today i functionalised the date/time translator so that it worked properly in the skill, demo'd the skill to gillian a bit and wrote the big list of stuff to do (see above). I also read through the user testing stuff that Gillian sent through the onedrive and watched the videos. I booked in some friends to do some bug finding for me - they will be playing with alexa mostly to try and break her (specifically looking for bugs and utterances that dont work as intended).
+
 
