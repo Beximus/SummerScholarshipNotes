@@ -229,5 +229,8 @@
 
 ##### January 14 
 * Today i functionalised the date/time translator so that it worked properly in the skill, demo'd the skill to gillian a bit and wrote the big list of stuff to do (see above). I also read through the user testing stuff that Gillian sent through the onedrive and watched the videos. I booked in some friends to do some bug finding for me - they will be playing with alexa mostly to try and break her (specifically looking for bugs and utterances that dont work as intended).
-
+* ![deskwall1 image](images/wallJan14.jpg "Main section of the wall near my desk")
+* ![deskwall2 image](images/wall2Jan14.jpg "Todo Section of the wall")
+* ![deskwall3 image](images/wall3Jan14.jpg "AWS stuff, meeting dates and user testing notes to remember - technically the computer not the wall but whatever")
+* This is the current state of the post it wall - I find these work better than traditional notes for me because they are laid out in terms of their relevance to each technical section and their relationships to one another. For the main section, the green notes are titles, the  peach ones are limitations or mitigating factors, blue are technical notes and orange is more of a to do list kind of thing.
 
