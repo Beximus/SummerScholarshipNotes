@@ -236,3 +236,15 @@
 
 ##### January 15
 * Today I have organized one of my friends (Zala Habib) to come in and try to find some bugs in the interaction /code for me in her lunch break. Other than that i am implementing my tutorial functions and refining them and then continuing to figure out the dynamoDB situation so that wehn i send my email to (skill expert guy with the name i cant remember right now) i dont waste his time by asking stupid questions.
+  
+##### January 16 
+* After letting zala play with the skill a bit yesterday the main takeaway was that the controls list needs to be clearer, the responses need to be more explanitory and the tutorial function really needs to be implemented so i went ahead and finished doing that. Once you start the tutorial mode it basically piggy backs off all of the other functions. It basically makes the response for each intent more explanitory. I also made each intent clearer and also got rid of any opportunity i could find for the user to answer yes/no because she can't respond to those properly. Today I brought in a different friend (Lucy Jaegers) to test / bugfind again based on the changes I made. I found a few clashes in intent utterances (not exactly the same thing but they sound close enough to cause issues with functionality). I also found that even with the added descriptors for how to interact with the skill, it can be easy to forget the list of commands. To counter that I changed what the help function says to list the possible commands as briefly as possible to at least make it easier to find a list of commands. I still need to implement a skill that lists off searchable locations and categories etc. and expand the read full event description skill so the user can say read full description for the sixth event etc but that is currently a lot further down on the wish list. The other thing i asked Lucy to look at was just to help flesh out the dialogue for invoking all of the intents as I dont even "see" any of the phrases anymore so it was nice to get a fresh perspective on that. After today I am a lot more happy with the useablity of the skill - it still needs a lot more tweaking and testing but it "works" right now.
+* The wishlist for things to add or edit keeps growing though.
+    1. Intent that lists currently searchable categories, locations and other terms. Also lists categories, locations and terms that can be refined by.
+    2. Change the refine intent so that you can refine by things that do not contain something
+    3. Intent that bookmarks events for later use.
+    4. Progressive response to the search, get next and full description function
+    5. DynamoDB for the entire event list - speeding up the process and making the alexa memory limitation less of an issue. 
+    6. Intent that tells you how many results currently match your terms,
+    7. Intent that clears session attribute search history
+    8. Intent that creates and tracks all terms used for search and refinement within a search i.e. searchedFor: "music", "wellington", "wheelchair-access", "theatre" - might be useful incase user needs to be reminded what they actually searched for.
