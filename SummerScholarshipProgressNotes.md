@@ -248,3 +248,4 @@
     6. Intent that tells you how many results currently match your terms,
     7. Intent that clears session attribute search history
     8. Intent that creates and tracks all terms used for search and refinement within a search i.e. searchedFor: "music", "wellington", "wheelchair-access", "theatre" - might be useful incase user needs to be reminded what they actually searched for.
+* For further development i need to be weary of utterances that might sound the same or clash with alexa trigger words like exit, stop etc.
