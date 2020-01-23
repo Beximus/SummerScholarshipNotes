@@ -249,3 +249,13 @@
     7. Intent that clears session attribute search history
     8. Intent that creates and tracks all terms used for search and refinement within a search i.e. searchedFor: "music", "wellington", "wheelchair-access", "theatre" - might be useful incase user needs to be reminded what they actually searched for.
 * For further development i need to be weary of utterances that might sound the same or clash with alexa trigger words like exit, stop etc.
+
+
+##### January 23 
+* so i went radio silent for a few days but it was just because i was busy sorting things out. I have sorted out persistent attributes and I now have the skill bookmarking events. I still need to add read bookmarked events and list bookmarked events to the thing but thats tomorrows problem. I also have the skill giving a different greeting to users depending on if they have used the skill before or not. 
+    ###### TOMORROW TODO:
+    * Flesh out bookmark intent
+    * clean up tutorials and response points
+    * look into moving the entire database to dynamo and see if we can make that work
+    * check the active number element works correctly p sure its currently storing the wrong number in bookmarks
+    * 
