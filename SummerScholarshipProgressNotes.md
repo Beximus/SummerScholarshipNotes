@@ -258,4 +258,21 @@
     * clean up tutorials and response points
     * look into moving the entire database to dynamo and see if we can make that work
     * check the active number element works correctly p sure its currently storing the wrong number in bookmarks
-    * 
+
+##### January 24
+* Built a read bookmarks intent
+* Cleaned up the bookmark event intent
+* cleaned up a lot of the dialog
+* added list the next event to the list event
+* cleaned up read full details
+  ###### TODO:
+  * still gotta add a delete bookmarks function
+  * build another date translator so that all depreciated events (old) are removed upon opening the skill
+  * make sure the tutorial works flawlessly
+  * upgrade the readbookmarks intent to read specific Intents, and to also scrape full event details when/if necessary
+    ###### long term to do:
+    * Make the model and list auto update and upload
+    * Migrate the back end of the skill to vuw AWS lambda and DYNAMO
+    * migrate the entire database to a dynamo database and remove get next from my life.
+* I also updated the wall yet again. This time the focus is mainly on the user journey and how/if it achieves its purpose
+* ![wallpic image](images/wallJan24.jpg "New wall again")
