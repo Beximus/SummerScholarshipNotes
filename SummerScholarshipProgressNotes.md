@@ -250,6 +250,7 @@
     8. Intent that creates and tracks all terms used for search and refinement within a search i.e. searchedFor: "music", "wellington", "wheelchair-access", "theatre" - might be useful incase user needs to be reminded what they actually searched for.
 * For further development i need to be weary of utterances that might sound the same or clash with alexa trigger words like exit, stop etc.
 
+#### Week 7: 20/01/20 - 24/01/20
 
 ##### January 23 
 * so i went radio silent for a few days but it was just because i was busy sorting things out. I have sorted out persistent attributes and I now have the skill bookmarking events. I still need to add read bookmarked events and list bookmarked events to the thing but thats tomorrows problem. I also have the skill giving a different greeting to users depending on if they have used the skill before or not. 
@@ -277,6 +278,8 @@
 * I also updated the wall yet again. This time the focus is mainly on the user journey and how/if it achieves its purpose
 * ![wallpic image](images/wallJan24.jpg "New wall again")
 
+#### Week 8: 27/01/20 - 31/01/20
+
 ##### January 28
 * Bookmark read has been expanded to include read next and read 1,2,3 etc.
 * Adding an intent that deletes all bookmarked events. adding a function that deletes specific bookmarks will come later
@@ -286,3 +289,36 @@
 * I could try to rebuild the skill to store all returned search data in persistent attributes but I think it would still risk timeout and errors.
 * Need to do another bugfinding mission
 * figure out how to make the model and things auto update - will have to do some research on that though.
+
+##### January 29
+* ##### List of things the skil does do:
+    * invoke skill, check if user has visited before and either creates or gets persistent attributes
+    * searches the api using search terms such as location, category, free, audio described or touch tour
+    * tutorial function that piggybacks off of the other functions.
+    * gets the next page of results (because results for the search are automatically paginated)
+    * refines matching results by location, category, wheelchair access, accessible toilets, mobility parking
+    * lists matching results - all results as well as specific ones
+    * scrapes full event details to read aloud
+    * Bookmarks events to persistent attributes, sorted by user id (amazon id)
+    * checks at skill launch if user has bookmarks, and if any of those bookmarks have expired (if so then it removes those events from the list)
+    * reads out list of bookmarks, reads out specific bookmarks
+    * scrapes data from bookmarked events to read to user.
+* ##### List of things the skill doesn't do yet:
+    * Clear all bookmarks
+    * delete specific bookmarks
+    * self update the model and lambda function
+    * Host the database on a dynamo DB to avoid paginating results
+* ##### List of things the skill cant do due to technical limitations:
+    * Search API and get all results in a single get request
+    * Store more than 24 kb worth of event data in working memory
+    * Have a sensical tree based list of locations ie. nz -> north island -> wellington -> wellington central
+    * Have a standardised list of categories
+    * search reliably for relaxed, audio described, touch tour, nzsl events
+    * refine reliably for NZSL, relaxed, etc.
+    * Get event contact details such as telephone or email reliably. This content is only stored in the event description and cannot be reliably searched out
+    * list the times of events with multiple shows or dates - Events basically only include start date and time and stop date and time
+    * search for part of title - full title only
+    * search for dates
+    * search for this week etc. 
+    * search for wheelchair access, mobility parking, accessible toilets
+    * return actual address in the response body
