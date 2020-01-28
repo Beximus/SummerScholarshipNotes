@@ -276,3 +276,13 @@
     * migrate the entire database to a dynamo database and remove get next from my life.
 * I also updated the wall yet again. This time the focus is mainly on the user journey and how/if it achieves its purpose
 * ![wallpic image](images/wallJan24.jpg "New wall again")
+
+##### January 28
+* Bookmark read has been expanded to include read next and read 1,2,3 etc.
+* Adding an intent that deletes all bookmarked events. adding a function that deletes specific bookmarks will come later
+* I need to find another human to test / play with the tutorial/ dialog model and help build it out/fix it because I feel like i cant write human speech anymore. 
+* Every time a user launches the skill it checks for and deletes all events that have passed. 
+* need to add another intent to scrape full details for bookmarked events so that users dont have to go and find it elsewhere. Or i need to modify the intent/other intents so that if the user asks to get full event details when coming from bookmarks it uses that information instead. But i think a separate intent will probably be easier to implement.
+* I could try to rebuild the skill to store all returned search data in persistent attributes but I think it would still risk timeout and errors.
+* Need to do another bugfinding mission
+* figure out how to make the model and things auto update - will have to do some research on that though.
