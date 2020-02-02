@@ -322,3 +322,24 @@
     * search for this week etc. 
     * search for wheelchair access, mobility parking, accessible toilets
     * return actual address in the response body
+
+#### Week 9: 03/02/20 - 07/02/20
+
+##### February 03
+* Today I will be working through the *entire* dialoge streams for the skill - ensuring that everything connects, makes sense and is as concise as possible. 
+* I will also work through making sure the tutorial is as easy to follow as possible:
+    1. Invoke skill "Open Arts Access Events"
+    2. "Start the Tutorial"
+    3. "Search for events in *location*"
+    4. "Refine by: *filter*"
+    5. "list all matching events"
+    6. "list the *ordinal* event"
+    7. "Get full event details"
+    8. "Bookmark This event"
+    9. "Clear Bookmarks"
+    10. "End Tutorial"
+* ###### TODO:
+  * Check refine/filter function for errors similar to the ones fixed in the search function
+  * Check list function for weird errors that popped up after last time
+  * Add delete specific bookmark to the clear bookmarks intent
+  * Re write help directory and include prompts to find it. 
