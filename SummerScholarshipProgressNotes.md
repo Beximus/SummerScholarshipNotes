@@ -343,3 +343,4 @@
   * Check list function for weird errors that popped up after last time
   * Add delete specific bookmark to the clear bookmarks intent
   * Re write help directory and include prompts to find it. 
+  * Move the skill back end to the vuw aws lambda and dynamo db account.
