@@ -344,3 +344,20 @@
   * Add delete specific bookmark to the clear bookmarks intent
   * Re write help directory and include prompts to find it. 
   * Move the skill back end to the vuw aws lambda and dynamo db account.
+
+##### February 04
+* Meeting with Gillian at 4pm
+* further clean up dialog
+* add delete specific bookmarks to clear bookmarks function
+* Wrote Up list of limitations - feels more like a list of grievances but i do have a list of things that would fix a lot of these issues too.
+
+TODO for tomorrow:
+    * WRITE UP USER TESTING SCRIPT
+    * BEG AND SCHEDULE FRIENDS FOR TESTING
+    * Add delete specific bookmark functionality
+    * Start mocking up those graphical representations of the dialog flow
+    * Start writing up what actually happened here
+    * Get The skill ready to migrate to VUW lambda and database hosting. [PREPARE FOR BUGPOCALYPSE]
+    * PREP THE SKILL FOR VALIDATION
+    * Write a list of locations to use in the model builder
+    * Write a list of categories to use in the model builder
