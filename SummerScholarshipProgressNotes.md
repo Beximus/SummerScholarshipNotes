@@ -361,3 +361,9 @@ TODO for tomorrow:
     * PREP THE SKILL FOR VALIDATION
     * Write a list of locations to use in the model builder
     * Write a list of categories to use in the model builder
+
+##### February 07
+* User testing today with Phoebe 1pm and grace 4pm 
+* Get The skill and DB ready for Testing with Phoebe
+* Get specific delete working for the skill
+* Compile the model building lists && make sure all intents can handle 0 result responses without crashing
