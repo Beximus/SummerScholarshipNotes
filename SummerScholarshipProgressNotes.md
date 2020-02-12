@@ -388,4 +388,6 @@ TODO for tomorrow:
 *  **If it works without bugs** immediately list the event when there is only one result.
 * When the number of results is <= 3 remove the further refine prompt.
 * How to integrate what is on offer into the tutorial?
+* copy .ask and .aws files for transfer day
+* phrasing for list and read full is awkward/formal feeling
 * 
