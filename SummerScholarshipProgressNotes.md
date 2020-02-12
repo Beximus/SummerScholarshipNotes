@@ -367,3 +367,25 @@ TODO for tomorrow:
 * Get The skill and DB ready for Testing with Phoebe
 * Get specific delete working for the skill
 * Compile the model building lists && make sure all intents can handle 0 result responses without crashing
+
+
+#### Post User Test with phoebe Notes:
+* the suspision i had since the start was proved true: The name needed to change so the skill is now called accessible events skill
+* I ended up having to build out the model a bit - added add to bookmarks and open the tutorial to the model
+* found a kiwi accent caused (thats the only reason i could find) but where instead of refine results for theate the skill goes into the list intent instead
+
+#### Week 10: 10/02/20 - 14/02/20
+
+###### Key Things to rebuild:
+
+* Add in list time for bookmarks:
+* Possibly Add in profile data
+* Streamline dialogue steps
+* consider removing read full events details from the bookmark step - just tell users they can do it instead?
+* response to no results for initiate search function is weird.
+* Make searching by city optional in the tutorial 
+* wording for refine by and list all matching results.
+*  **If it works without bugs** immediately list the event when there is only one result.
+* When the number of results is <= 3 remove the further refine prompt.
+* How to integrate what is on offer into the tutorial?
+* 
