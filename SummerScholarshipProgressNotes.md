@@ -390,4 +390,18 @@ TODO for tomorrow:
 * How to integrate what is on offer into the tutorial?
 * copy .ask and .aws files for transfer day
 * phrasing for list and read full is awkward/formal feeling
-* 
+
+#### Week 11: 17/02/20 - 21/02/20
+
+##### User Tests Scheduled for:
+  * Wednesday @4pm in Library Room 116
+
+##### Monday 17/02/20
+* First Thing make sure the tutorial is more streamlined and still makes sense.
+* Elaborate the model for Refine by and read full event details - try to find the most memorable least awkward phrases
+* Elaborate on the kind of events available to the user in the Luanch Handler and then re-iterate in the tutorial
+* Add search for month into the search function. 
+* Create array randomiser for Locations and categories that can be searched.
+* Add List times/ dates function to the bookmarks intent
+
+* I fixed the tutorial some more, created an array randomiser to suggest searchable/refinable terms, added NZSL and sensory relaxed to the search function as well as adding sensory relaxed, audio descirbed, touch tour and nzsl as refinable terms. I also added another phrasing to the model.
