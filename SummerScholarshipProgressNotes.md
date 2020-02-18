@@ -405,3 +405,19 @@ TODO for tomorrow:
 * Add List times/ dates function to the bookmarks intent
 
 * I fixed the tutorial some more, created an array randomiser to suggest searchable/refinable terms, added NZSL and sensory relaxed to the search function as well as adding sensory relaxed, audio descirbed, touch tour and nzsl as refinable terms. I also added another phrasing to the model.
+
+
+##### Tuesday 18/02/20
+* worked from home
+* fixed a lot of bugs
+* wrote out the readme/build explainer
+* compiled a list of issues that still need fixing
+* added delete specific bookmarks
+
+
+##### Wednesday 19/02/20
+* User testing today with stace
+* Fix tutorial
+* fix bugs with list/read next
+
+write up things
