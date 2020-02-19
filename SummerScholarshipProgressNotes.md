@@ -421,3 +421,7 @@ TODO for tomorrow:
 * fix bugs with list/read next
 
 write up things
+
+* Fix/wind up tutorial dialogue
+
+* add two term search if works /time
